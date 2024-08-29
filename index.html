@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="flex flex-col items-center justify-center bg-cover bg-center h-screen m-0 no-repeat" style="background-image: url('./images/moon.jpg')">
+        <h1 style="font-size:xx-large; color: aliceblue; text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;" class="text-4xl font-bold">Search Page </h1>
+        <div class="relative w-full max-w-md m-5">
+            <div class="relative">
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Search items..."
+                  class="w-full px-4 py-2 pr-10 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <div id="clearInput" class="absolute inset-y-0 right-0 flex items-center pr-3 cursor-pointer hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </div>
+                <div id="searchList" class="absolute inset-y-0 right-0 flex items-center pr-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.33 4.33a1 1 0 01-1.42 1.42l-4.33-4.33zM8 14a6 6 0 100-12 6 6 0 000 12z" clip-rule="evenodd" />
+                    </svg>
+                </div>
+            </div>
+            
+            <ul id="itemList" class="hidden"></ul>
+            
+            <!-- <div class="flex justify-center">
+                <button id="submitBtn" class="px-4 py-2 m-4 bg-blue-500 text-white rounded">Submit</button>
+            </div> -->
+        </div>
+        
+        <div id="countryInfo" class="hidden p-3" style="background-color:rgba(255, 255, 255, 0.5);">
+            <h1><u>General info of the country</u></h1>
+            <br/>   
+            <p id="countryDetails" class="p-2 border border-rounded-lg" style="background-color:rgba(255, 255, 255, 0.5);"></p>
+        </div>
+    </div>
+      
+    <script src="script.js"></script>
+</body>
+</html>
